@@ -8,15 +8,22 @@ public class Main {
         Book book2 = new Book("Алгоритмы", "Лафоре", 2022, true);
         Book book3 = new Book("Сказ о рыбаке и рыбке", "Пушкин");
         Book book4 = new Book("Мартин Иден", "Лондон");
+        Book book5 = new Book("Евгений Онегин", "Пушкин");
+        Book book6 = new Book("Мартин Иден", "Лондон");
 
         library.addBook(book1);
         library.addBook(book2);
         library.addBook(book3);
         library.addBook(book4);
+        library.addBook(book5);
+        library.addBook(book6);
+        System.out.println("Доступные книги ДО возврата:");
         library.printAvailableBooks();
         book1.returnBook();
         book2.borrowBook();
+        System.out.println("Доступные книги ПОСЛЕ возврата:");
         library.printAvailableBooks();
-        library.findBooksByAuthor("Пушкин").displayInfo();
+        System.out.println("Поиск книг по автору:");
+        library.findBooksByAuthor("Пушкин").forEach(x -> x.displayInfo());
     }
 }

@@ -1,10 +1,16 @@
 package org.aston.homeworks;
 
+import java.util.Objects;
+
 public class Book {
     private String title;
     private String author;
     private Integer year;
-    private boolean isAvailable = true;
+    private boolean isAvailable;
+
+    public String getTitle() {
+        return title;
+    }
 
     public String getAuthor() {
         return author;
@@ -24,15 +30,17 @@ public class Book {
     public Book(String title, String author) {
         this.title = title;
         this.author = author;
+        this.year = 0;
+        this.isAvailable = true;
     }
 
     public void borrowBook() {
-        if (this.isAvailable == true)
+        if (isAvailable)
             this.isAvailable = false;
     }
 
     public void returnBook() {
-        if (this.isAvailable == false)
+        if (!isAvailable)
             this.isAvailable = true;
     }
 
@@ -41,5 +49,18 @@ public class Book {
         System.out.println("Название книги - " + this.title);
         System.out.println("Год издания - " + this.year);
         System.out.println("**************************************************");
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return isAvailable == book.isAvailable && Objects.equals(title, book.title) && Objects.equals(author, book.author) && Objects.equals(year, book.year);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, author, year, isAvailable);
     }
 }
