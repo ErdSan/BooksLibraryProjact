@@ -6,7 +6,7 @@ public class Book {
     private String title;
     private String author;
     private Integer year;
-    private boolean isAvailable;
+    private Boolean isAvailable;
 
     public String getTitle() {
         return title;

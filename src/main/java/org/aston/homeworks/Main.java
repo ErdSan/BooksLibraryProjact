@@ -24,6 +24,6 @@ public class Main {
         System.out.println("Доступные книги ПОСЛЕ возврата:");
         library.printAvailableBooks();
         System.out.println("Поиск книг по автору:");
-        library.findBooksByAuthor("Пушкин").forEach(x -> x.displayInfo());
+        library.findBooksByAuthor("ПУшкин").forEach(x -> x.displayInfo());
     }
 }

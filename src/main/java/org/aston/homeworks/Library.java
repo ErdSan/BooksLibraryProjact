@@ -29,7 +29,7 @@ public class Library {
     public List<Book> findBooksByAuthor(String author) {
         List<Book> foundBooks = new ArrayList<>();
         for (Book book : books) {
-            if (book.getAuthor().equals(author)) {
+            if (book.getAuthor().equalsIgnoreCase(author)) {
                 foundBooks.add(book);
             }
         }
