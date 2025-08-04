@@ -2,6 +2,9 @@ package org.aston.homeworks;
 
 import java.util.Objects;
 
+/**
+ * Класс книги
+ */
 public class Book {
     private String title;
     private String author;
