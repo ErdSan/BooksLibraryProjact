@@ -5,6 +5,9 @@ import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Класс библиотеки
+ */
 public class Library {
     private Set<Book> books = new LinkedHashSet<>();
 
