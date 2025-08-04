@@ -1,5 +1,8 @@
 package org.aston.homeworks;
 
+/**
+ * Главный класс
+ */
 public class Main {
     private static Library library = new Library();
 
