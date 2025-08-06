@@ -3,7 +3,7 @@ package org.aston.homeworks;
 import java.util.Objects;
 
 /**
- * Класс книги коммент2
+ * Класс книги коммент2 новый
  */
 public class Book {
     private String title;
