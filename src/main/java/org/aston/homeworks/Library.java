@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Класс библиотеки коммент3
+ * Класс библиотеки коммент3 новый
  */
 public class Library {
     private Set<Book> books = new LinkedHashSet<>();
