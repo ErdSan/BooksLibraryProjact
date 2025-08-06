@@ -1,7 +1,7 @@
 package org.aston.homeworks;
 
 /**
- * Главный класс коммент реверт
+ * Главный класс коммент1 новый
  */
 public class Main {
     private static Library library = new Library();
